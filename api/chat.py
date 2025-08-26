@@ -105,4 +105,6 @@ async def get_thread_messages(thread_id: str):
         raise HTTPException(status_code=500, detail=f"Error retrieving messages: {str(e)}")
 
 # For Vercel deployment
-handler = app
+from mangum import Mangum
+
+handler = Mangum(app)
