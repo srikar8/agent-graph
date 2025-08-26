@@ -1,0 +1,16 @@
+{
+  "functions": {
+    "api/chat.py": {
+      "runtime": "python3.9"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/chat.py"
+    }
+  ],
+  "env": {
+    "PYTHON_PATH": "./"
+  }
+}
