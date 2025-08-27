@@ -7,7 +7,7 @@ import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 try:
-    from my_agent.agent import graph
+    from my_agent import graph
     from langchain_core.messages import HumanMessage
     AGENT_AVAILABLE = True
 except ImportError as e:

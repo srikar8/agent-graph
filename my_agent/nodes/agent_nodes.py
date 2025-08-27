@@ -1,13 +1,12 @@
 from functools import lru_cache
 from langchain_openai import ChatOpenAI
-from my_agent.utils.tools import tools
+from my_agent.tools import tools
 from langgraph.prebuilt import ToolNode
 
 
 @lru_cache(maxsize=4)
 def _get_model():
     model = ChatOpenAI(temperature=0, model_name="gpt-4o")
-
     model = model.bind_tools(tools)
     return model
 

@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 from langgraph.graph import StateGraph, END
 from langgraph.checkpoint.postgres import PostgresSaver
-from my_agent.utils.nodes import call_model, should_continue, tool_node
+from my_agent.nodes import call_model, should_continue, tool_node
 from my_agent.utils.state import AgentState
 
 # Load environment variables
