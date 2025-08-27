@@ -5,11 +5,13 @@ import os
 import sys
 from typing import Optional
 
-# Add the project root to Python path
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+# Add the project root to Python path so we can import backend
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
 
 try:
-    from my_agent import graph
+    from backend.agents import graph
     from langchain_core.messages import HumanMessage
     AGENT_AVAILABLE = True
 except ImportError as e:
@@ -114,4 +116,4 @@ async def chat(request: ChatRequest):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=5500)

@@ -1,0 +1,11 @@
+ERROR:    Error loading ASGI app. Could not import module "backend.langgraph_main".
+INFO:     Started server process [11461]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:5500 (Press CTRL+C to quit)
+💻 Running locally - configuring official PostgresSaver
+✅ Official PostgresSaver configured successfully with manual context management
+INFO:     127.0.0.1:61068 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61068 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61070 - "POST /chat HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:61085 - "POST /chat HTTP/1.1" 200 OK
