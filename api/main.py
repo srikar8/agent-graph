@@ -1,7 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from mangum import Mangum
 import os
 import sys
 from typing import Optional
@@ -112,9 +111,6 @@ async def chat(request: ChatRequest):
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error processing request: {str(e)}")
-
-# Vercel serverless handler
-handler = Mangum(app)
 
 if __name__ == "__main__":
     import uvicorn

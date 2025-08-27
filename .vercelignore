@@ -16,3 +16,9 @@ start_server.py
 .pytest_cache/
 .coverage
 htmlcov/
+node_modules/
+.next/
+.nuxt/
+dist/
+build/
+static/agent_ui.png

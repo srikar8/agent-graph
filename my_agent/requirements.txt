@@ -1,9 +1,0 @@
-langgraph
-tavily-python
-langchain_community
-langchain_openai
-langgraph-cli[inmem]
-langgraph-api
-psycopg[binary]
-langgraph-checkpoint-postgres
-python-dotenv
